@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+<style>
+    body{
+    background-color: rgb(159, 199, 215);
+    padding:30px;
+
+}
+.accordian{
+    background-color: whitesmoke;
+    padding:8px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.question{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    cursor: pointer;
+}
+.icon{
+    margin-right: 16px;
+    
+}
+.icon.active{
+    transform: rotate(-180deg);
+}
+.answer{
+    max-height: 0px;
+    overflow: hidden;
+}
+.answer.active{
+    max-height: 100px;
+    overflow: visible;
+}
+</style>
+<body>
+    <h2>Javascript FAQ's</h2>
+    <div class="accordian">
+        <div class="question">
+            <h3>1. What is JavaScript?</h3>
+            <i class="icon bi bi-caret-down-fill"></i>
+        </div>
+        <div class="answer">
+            <p>JavaScript is a scripting language. It is different from Java language.
+                 It is object-based, lightweight, cross-platform translated language. 
+                 It is widely used for client-side validation.
+                 The JavaScript Translator (embedded in the browser) is responsible for translating the JavaScript code for the web browser.</p>
+        </div>
+    </div>
+
+
+
+    <div class="accordian">
+        <div class="question">
+            <h3>2. What are the different data types present in javascript?</h3>
+            <i class="icon bi bi-caret-down-fill"></i>
+        </div>
+        <div class="answer">
+            <p>Boolean - For true and false values
+                Null - For empty or unknown values
+                Undefined - For variables that are only declared and not defined or initialized
+                Number - For integer and floating-point numbers
+                String - For characters and alphanumeric values
+                Object - For collections or complex values
+                Symbols - For unique identifiers for objects</p>
+        </div>
+    </div>
+
+    <div class="accordian">
+        <div class="question">
+            <h3>3. What are the features of JavaScript?</h3>
+            <i class="icon bi bi-caret-down-fill"></i>
+        </div>
+        <div class="answer">
+            <p>JavaScript is a lightweight, interpreted programming language.
+                JavaScript is designed for creating network-centric applications.
+                JavaScript is complementary to and integrated with Java.
+                JavaScript is complementary to and integrated with HTML.
+                JavaScript is open and cross-platform.</p>
+        </div>
+    </div>
+
+    <div class="accordian">
+        <div class="question">
+            <h3>4.Is javascript case-sensitive?</h3>
+            <i class="icon bi bi-caret-down-fill"></i>
+        </div>
+        <div class="answer">
+            <p>Yes, JavaScript is a case-sensitive language.
+                 This means that language keywords, variables, function names, and any other
+                  identifiers must always be typed with a consistent capitalization of letters.</p>
+        </div>
+    </div>
+
+    
+</body>
+<script>
+    
+    const accordians=document.querySelectorAll(".accordian")
+    accordians.forEach(accordian=>{
+        const icon=accordian.querySelector(".icon")
+        const answer=accordian.querySelector(".answer")
+
+        accordian.addEventListener("click",()=>{
+            icon.classList.toggle("active")
+            answer.classList.toggle("active")
+        })
+    })
+    
+</script>
+</html>
